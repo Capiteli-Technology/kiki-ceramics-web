@@ -1247,6 +1247,11 @@ html[lang="ka"] .btn {
     padding: 32px 24px;
   }
 
+  .hero-logo-wrapper {
+    margin-top: -80px;
+    margin-bottom: -32px;
+  }
+
   .hero-logo {
     width: min(300px, 70vw);
   }
@@ -1261,6 +1266,11 @@ html[lang="ka"] .btn {
 @media (max-width: 480px) {
   :root {
     --section-padding: 48px;
+  }
+
+  .hero-logo-wrapper {
+    margin-top: -48px;
+    margin-bottom: -16px;
   }
 
   .hero-tagline {
