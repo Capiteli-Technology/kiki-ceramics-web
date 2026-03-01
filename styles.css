@@ -424,19 +424,14 @@ button {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-color: var(--color-olive);
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(108, 113, 83, 0.8) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 50%, rgba(85, 90, 63, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 100%, rgba(138, 143, 110, 0.4) 0%, transparent 50%);
-  background-size: cover;
+  background: url('assets/images/hero-bg.jpg') center/cover no-repeat;
 }
 
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
@@ -456,6 +451,12 @@ button {
   margin-right: auto;
   pointer-events: none;
   user-select: none;
+  animation: logoHover 5s ease-in-out 4s infinite;
+}
+
+@keyframes logoHover {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
 }
 
 /* --- All logo layers share the same size and position --- */
@@ -589,7 +590,8 @@ button {
   color: var(--color-cream);
   letter-spacing: 0.15em;
   opacity: 0;
-  animation: lettersBounce 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 2.7s both;
+  animation: lettersBounce 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 2.7s both,
+             logoHover 5s ease-in-out 4s infinite;
 }
 
 .hero-scroll {
@@ -600,7 +602,12 @@ button {
   z-index: 5;
   color: var(--color-cream);
   opacity: 0.5;
-  animation: scrollBounce 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 2.7s both, float 2s ease-in-out infinite 3.9s;
+  animation: scrollBounce 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 2.7s both, scrollFloat 5s ease-in-out 4s infinite;
+}
+
+@keyframes scrollFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(-8px); }
 }
 
 @keyframes scrollBounce {
@@ -642,10 +649,10 @@ button {
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .about-description {
@@ -747,7 +754,7 @@ button {
 .instagram-embed-iframe {
   width: 100%;
   max-width: 540px;
-  min-height: 800px;
+  min-height: 560px;
   border: none;
   border-radius: 8px;
 }
@@ -1130,18 +1137,22 @@ button {
 
 /* Georgian language specifics */
 html[lang="ka"] .section-title,
-html[lang="ka"] .hero-tagline,
+html[lang="ka"] .hero-tagline {
+  font-family: var(--font-georgian-heading);
+  font-weight: 300;
+  font-size: 0.88em;
+}
+
 html[lang="ka"] .quote-text {
   font-family: var(--font-georgian-heading);
   font-weight: 300;
-  font-size: 0.9em;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
 }
 
 html[lang="ka"] .nav-link,
 html[lang="ka"] .mobile-link,
 html[lang="ka"] .footer-links a {
   font-family: var(--font-georgian);
-  font-size: 0.9em;
   letter-spacing: 0.08em;
 }
 
@@ -1150,7 +1161,6 @@ html[lang="ka"] .about-description,
 html[lang="ka"] .service-text,
 html[lang="ka"] .contact-description,
 html[lang="ka"] .btn {
-  font-size: 0.9em;
 }
 
 /* Print & reduced-motion: disable animations */

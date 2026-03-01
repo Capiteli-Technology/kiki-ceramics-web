@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1500">
 <defs><style>.cls-1{fill:#fff;}</style>
-<clipPath id="z"><polygon points="965,725 1070,575 1500,0 1500,1500 1070,875"/></clipPath></defs>
+<clipPath id="z"><polygon points="963,723 1068,573 1500,0 1500,1500 1068,877"/></clipPath></defs>
 <g clip-path="url(#z)">
 <path class="cls-1" d="M839,749.79l1.51,2.26C840.71,751.57,840.41,750.86,839,749.79Z"/>
 <path class="cls-1" d="M961.35,584.79a4.49,4.49,0,0,0-.38.51C961.29,585,961.36,584.88,961.35,584.79Z"/>
