@@ -297,6 +297,11 @@ button {
   transition: var(--transition);
 }
 
+.lang-option[data-lang="ka"] {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
 .lang-option.active {
   opacity: 1;
   font-weight: 500;

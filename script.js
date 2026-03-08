@@ -88,8 +88,12 @@ const translations = {
 
 let currentLang = 'en';
 
-// --- Detect language from URL or localStorage ---
+// --- Detect language from URL path or localStorage ---
 function detectLanguage() {
+  // Check URL path first (e.g. /ge or /ge/)
+  if (window.location.pathname.replace(/\/$/, '') === '/ge') {
+    return 'ka';
+  }
   // Check if redirected from /ge (localStorage set by ge/index.html)
   const stored = localStorage.getItem('kiki-lang');
   if (stored === 'ge') {
@@ -109,6 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const lang = detectLanguage();
   setLanguage(lang);
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', () => {
+    setLanguage(detectLanguage());
+  });
 });
 
 // --- Navigation Scroll Effect ---
@@ -156,11 +165,7 @@ function initLanguageToggle() {
   options.forEach(option => {
     option.addEventListener('click', () => {
       const lang = option.dataset.lang;
-      if (lang === 'ka') {
-        window.location.href = '/ge' + window.location.hash;
-      } else {
-        window.location.href = '/' + window.location.hash;
-      }
+      setLanguage(lang);
     });
   });
 }
@@ -189,10 +194,11 @@ function setLanguage(lang) {
     ? 'კიკი კერამიკა | ხელნაკეთი კერამიკა'
     : 'Kiki Ceramics | Handmade Ceramics';
 
-  // Update URL path
+  // Update URL path without page reload
   const targetPath = lang === 'ka' ? '/ge' : '/';
-  if (window.location.pathname !== targetPath) {
-    history.replaceState(null, '', targetPath + window.location.hash);
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  if (currentPath !== targetPath) {
+    history.pushState({ lang: lang }, '', targetPath + window.location.hash);
   }
 }
 
