@@ -37,9 +37,9 @@
   --color-text-light: #6b6b6b;
   --color-text-muted: #999;
   --color-border: #e5e2d5;
-  --font-display: 'Baron Neue', 'Cormorant Garamond', Georgia, serif;
-  --font-heading: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Inter', 'Noto Sans Georgian', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Amatic SC', 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Amatic SC', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Amatic SC', 'Inter', 'Noto Sans Georgian', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-georgian: 'Noto Sans Georgian', 'Inter', sans-serif;
   --font-georgian-heading: 'Noto Serif Georgian', Georgia, serif;
   --container-max: 1200px;
@@ -102,8 +102,8 @@ button {
 .section-label {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-olive);
@@ -116,8 +116,8 @@ button {
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: 400;
   color: var(--color-olive-dark);
   line-height: 1.2;
   margin-bottom: 32px;
@@ -134,8 +134,8 @@ button {
   justify-content: center;
   padding: 14px 36px;
   font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border-radius: 2px;
@@ -242,7 +242,7 @@ button {
 }
 
 .nav-link {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -368,7 +368,7 @@ button {
 .mobile-link {
   display: block;
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--color-cream);
   margin-bottom: 24px;
   opacity: 0;
@@ -599,9 +599,8 @@ button {
 
 .hero-tagline {
   font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  font-weight: 300;
-  font-style: italic;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 400;
   color: var(--color-cream);
   letter-spacing: 0.15em;
   opacity: 0;
@@ -660,8 +659,8 @@ button {
 }
 
 .about-description {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.6;
   color: var(--color-text-light);
   margin-bottom: 20px;
 }
@@ -730,15 +729,15 @@ button {
 
 .service-title {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: var(--color-olive-dark);
   margin-bottom: 16px;
 }
 
 .service-text {
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 1.25rem;
+  line-height: 1.5;
   color: var(--color-text-light);
 }
 
@@ -784,11 +783,10 @@ button {
 
 .quote-text {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 300;
-  font-style: italic;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
   color: var(--color-cream);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* =========================================
@@ -806,8 +804,8 @@ button {
 }
 
 .contact-description {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.6;
   color: var(--color-text-light);
   margin-bottom: 32px;
 }
@@ -821,7 +819,7 @@ button {
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   color: var(--color-text-light);
 }
 
@@ -848,8 +846,8 @@ button {
   align-items: center;
   gap: 8px;
   color: var(--color-olive);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 1.15rem;
+  font-weight: 400;
   letter-spacing: 0.05em;
 }
 
@@ -1053,8 +1051,7 @@ button {
   margin-bottom: 16px;
   color: var(--color-text);
   font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-style: italic;
+  font-size: 1.5rem;
 }
 
 /* =========================================
@@ -1084,7 +1081,7 @@ button {
 }
 
 .footer-links a {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-cream);
@@ -1111,7 +1108,7 @@ button {
 }
 
 .footer-copy {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--color-cream);
   opacity: 0.4;
   margin-top: 8px;
@@ -1276,7 +1273,7 @@ html[lang="ka"] .btn {
 
   .hero-tagline {
     letter-spacing: 0.08em;
-    font-size: clamp(0.95rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.3rem, 3vw, 2rem);
   }
 
   .section-title {
