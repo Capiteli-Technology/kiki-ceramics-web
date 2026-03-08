@@ -281,7 +281,7 @@ button {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   letter-spacing: 0.1em;
   color: var(--color-cream);
   transition: var(--transition);
@@ -1137,24 +1137,35 @@ button {
 
 /* Gallery item stagger */
 
-/* Georgian language specifics */
+/* Georgian language specifics — smaller sizes to match Georgian script proportions */
+html[lang="ka"] {
+  font-size: 13px;
+}
+
+html[lang="ka"] .lang-toggle {
+  font-size: 17.6px;
+}
+
 html[lang="ka"] .section-title,
 html[lang="ka"] .hero-tagline {
   font-family: var(--font-georgian-heading);
-  font-weight: 300;
-  font-size: 0.88em;
+  font-weight: 400;
+}
+
+html[lang="ka"] .hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
 }
 
 html[lang="ka"] .quote-text {
   font-family: var(--font-georgian-heading);
-  font-weight: 300;
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 400;
 }
 
 html[lang="ka"] .nav-link,
 html[lang="ka"] .mobile-link,
 html[lang="ka"] .footer-links a {
   font-family: var(--font-georgian);
+  font-weight: 400;
   letter-spacing: 0.08em;
 }
 
@@ -1163,6 +1174,8 @@ html[lang="ka"] .about-description,
 html[lang="ka"] .service-text,
 html[lang="ka"] .contact-description,
 html[lang="ka"] .btn {
+  font-family: var(--font-georgian);
+  font-weight: 400;
 }
 
 /* Print & reduced-motion: disable animations */
